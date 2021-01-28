@@ -66,7 +66,6 @@ app.post('/register-and-broadcast-node', function(req, res){
         };
         regNodesPromises.push(rp(requestOption));
     });
-
     Promise.all(regNodesPromises).then(data=>{
         const bulkRegisterOptions ={
             uri: newNodeUrl + '/register-nodes-bulk',

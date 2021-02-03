@@ -1,0 +1,24 @@
+*Chain 1 = Chain 2
+1. T1 > T2 && N1->N2 Consensus : E = X, R = X, 
+2. T1 > T2 && N1<-N2 Consensus : E = O, R = O, 
+3. T1 < T2 && N1->N2 Consensus : E = O, R = O, 
+4. T1 < T2 && N1<-N2 Consensus : E = X, R = X, 
+5. T1 = T2 && N1->N2 Consensus : E = X, R = X, 
+6. T1 = T2 && N1<-N2 Consensus : E = X, R = X, 
+
+*Chain 1 > Chain2
+1. T1 > T2 && N1->N2 Consensus : E = X, R = X, 
+2. T1 > T2 && N1<-N2 Consensus : E = O, R = O,
+3. T1 < T2 && N1->N2 Consensus : E = X, R = X,
+4. T1 < T2 && N1<-N2 Consensus : E = O, R = O, 
+5. T1 = T2 && N1->N2 Consensus : 
+6. T1 = T2 && N1<-N2 Consensus : 
+
+*Chain 1 < Chain2
+1. T1 > T2 && N1->N2 Consensus : 
+2. T1 > T2 && N1<-N2 Consensus : 
+3. T1 < T2 && N1->N2 Consensus : 
+4. T1 < T2 && N1<-N2 Consensus : 
+5. T1 = T2 && N1->N2 Consensus : 
+6. T1 = T2 && N1<-N2 Consensus : 
+

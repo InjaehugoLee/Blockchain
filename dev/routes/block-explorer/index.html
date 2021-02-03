@@ -130,7 +130,7 @@
 			$scope.initialSearchMade = false;
 
 			$scope.fetchBlock = function(blockHash) {
-				$http.get(`/block/${blockHash}`)
+				$http.get(`/explorer/block/${blockHash}`)
 				.then(response => {
 					$scope.block = response.data.block;
 					$scope.transaction = null;
@@ -139,7 +139,7 @@
 			};
 
 			$scope.fetchTransaction = function(transactionId) {
-				$http.get(`/transaction/${transactionId}`)
+				$http.get(`/explorer/transaction/${transactionId}`)
 				.then(response => {
 					$scope.transaction = response.data.transaction;
 					$scope.block = null;
@@ -148,7 +148,7 @@
 			};
 
 			$scope.fetchAddressData = function(address) {
-				$http.get(`/address/${address}`)
+				$http.get(`/explorer/address/${address}`)
 				.then(response => {
 					$scope.addressData = response.data.addressData;
 					if (!$scope.addressData.addressTransactions.length) $scope

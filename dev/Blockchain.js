@@ -3,8 +3,6 @@ const sha256 = require('sha256');
 const currentNodeUrl = process.argv[3];
 const {v1:uuid}= require('uuid');
 
-
-
 // 블록체인 생성자 함수
 function Blockchain(){
     // 채굴한 모든 블록을 저장하는 배열 선언
@@ -70,8 +68,8 @@ Blockchain.prototype.proofOfWork = function(prevBlockHash, curBlockData){
     return nonce;
 }
 
-Blockchain.prototype.addTransactionToPendingTransactions = function(transactionObj){
-    this.newTransactions.push(transactionObj);
+Blockchain.prototype.addTransactionToPendingTransactions = function(newTransaction){
+    this.newTransactions.push(newTransaction);
     return this.getLastBlock()['index']+1;
 }
 
